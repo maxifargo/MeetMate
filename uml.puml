@@ -1,0 +1,38 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Reunion {
+  - fecha : String
+  - hora  : String
+  - descripcion : String
+  - etiqueta : String
+  + Reunion(fecha:String, hora:String, descripcion:String, etiqueta:String)
+  + getFecha() : String
+  + setFecha(fecha:String) : void
+  + getHora() : String
+  + setHora(hora:String) : void
+  + getDescripcion() : String
+  + setDescripcion(desc:String) : void
+  + getEtiqueta() : String
+  + setEtiqueta(etiqueta:String) : void
+  + toString() : String
+}
+
+class Agenda {
+  - reuniones : List<Reunion>
+  - reunionesPorEtiqueta : Map<String, List<Reunion>>
+  + agregarReunion(fecha:String, hora:String, descripcion:String) : void
+  + agregarReunion(fecha:String, hora:String, descripcion:String, etiqueta:String) : void
+  - agregarPorEtiqueta(r:Reunion) : void
+  + mostrarReuniones() : void
+  + mostrarReunionesPorEtiqueta() : void
+}
+
+class Main {
+  + main(args:String[]) : void
+}
+
+Agenda o-- "0..*" Reunion : agregación
+Main ..> Agenda : usa
+
+@enduml
