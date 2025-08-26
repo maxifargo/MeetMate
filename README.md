@@ -57,6 +57,7 @@ java Main
 2. Mostrar todas las reuniones
 3. Mostrar reuniones por etiqueta
 0. Salir
+   
 Seleccione opción: 2
 
 Listado de reuniones:
