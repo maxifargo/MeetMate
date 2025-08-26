@@ -1,6 +1,6 @@
-# MeetMate
+# MeetMate (primer avance)
 
-Este proyecto implementa una agenda interactiva de reuniones en Java, aplicando conceptos básicos de Programación Orientada a Objetos (POO) y UML como:  
+Este proyecto en su primer avance implementa una agenda interactiva de reuniones en Java, aplicando conceptos básicos de Programación Orientada a Objetos (POO) y UML como:  
 - Clases y atributos privados con getters y setters.  
 - Sobrecarga de métodos (`agregarReunion`).  
 - Uso de colecciones (`List` y `Map`) para almacenar y organizar reuniones.  
@@ -65,6 +65,4 @@ Listado de reuniones:
 
 Notas
 
-Si no se especifica una etiqueta al agregar una reunión, se asigna automáticamente la etiqueta "General".
-
-El sistema es extensible: se pueden agregar más funciones como eliminación o edición de reuniones.
+Se busca agregar funciones y completar el código en los próximos hitos.
