@@ -62,7 +62,7 @@ Clase principal con el menú interactivo para el usuario.
 
 ## ▶ Ejecución y ejemplo
 
-> Requisito: tener instalado **JDK** (Java Development Kit).  
+> Requisito: tener instalado **JDK** 11 (Java Development Kit).  
 > Verificar con:
 > ```
 > bash
