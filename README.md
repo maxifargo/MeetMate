@@ -68,9 +68,7 @@ Compilar y ejecutar en consola:
 bash
 javac Main.java
 java Main
-📋 Ejemplo de uso
-markdown
-Copiar código
+
 --- MENU AGENDA ---
 
 1. Insertar nueva reunión
