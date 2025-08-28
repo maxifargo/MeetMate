@@ -1,6 +1,7 @@
 # MeetMate (Primer Avance) ADA-3
 
-Integrantes
+## Integrantes
+
 Joaquín Muñoz
 
 Joaquín Tapia
