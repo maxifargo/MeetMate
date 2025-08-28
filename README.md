@@ -8,6 +8,8 @@ Joaquín Tapia
 
 Maximiliano Fargo
 
+## Introducción
+
 Este proyecto implementa una agenda interactiva de reuniones en Java, aplicando conceptos de Programación Orientada a Objetos y UML.  
 Actualmente es un primer avance, y se irán agregando más funcionalidades en próximos hitos.
 Este proyecto es de naturaleza modular, es decir, las clases vienen separadas en distintos archivos de códigos .java.
