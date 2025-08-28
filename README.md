@@ -60,7 +60,7 @@ Clase principal con el menú interactivo para el usuario.
 
 ---
 
-## ▶ Ejecución
+## ▶ Ejecución y ejemplo
 
 Compilar y ejecutar en consola:
 
