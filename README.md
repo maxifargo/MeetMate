@@ -62,6 +62,14 @@ Clase principal con el menú interactivo para el usuario.
 
 ## ▶ Ejecución y ejemplo
 
+> Requisito: tener instalado **JDK** (Java Development Kit).  
+> Verificar con:
+> ```
+> bash
+> java -version
+> javac -version
+> ```
+
 Compilar y ejecutar en consola:
 
 ```
