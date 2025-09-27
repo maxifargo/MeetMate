@@ -129,6 +129,7 @@ public class MainWindow extends JFrame {
         
         if (opcion == JOptionPane.YES_OPTION) {
             ag.guardarEnArchivo("agenda.csv");
+            System.exit(0);
         }
         if(opcion == JOptionPane.NO_OPTION)
         System.exit(0);
