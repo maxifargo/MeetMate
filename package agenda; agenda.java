@@ -192,18 +192,19 @@ public class Agenda {
         return resultado;
     }
  // 🔹 Método para cargar datos iniciales
-    public void cargarDatosIniciales() {
+    public void inicializarDatosDePruebaSiFaltan() {
         try {
-            agregarReunion("Carlos", 1, "01/10/2025", "09:00", "Trabajo");
-            agregarReunion("Ana", 2, "02/10/2025", "10:30", "Estudio");
-            agregarReunion("Luis", 3, "03/10/2025", "15:00", "Deporte");
-            agregarReunion("Ana", 4, "04/10/2025", "11:00", "Trabajo");
+            if (buscarPorId(1) == null) agregarReunion("Carlos", 1, "01/10/2025", "09:00", "Trabajo");
+            if (buscarPorId(2) == null) agregarReunion("Ana",    2, "02/10/2025", "10:30", "Estudio");
+            if (buscarPorId(3) == null) agregarReunion("Luis",   3, "03/10/2025", "15:00", "Deporte");
+            if (buscarPorId(4) == null) agregarReunion("Ana",    4, "04/10/2025", "11:00", "Trabajo");
         } catch (FechaInvalidaException | HoraInvalidaException e) {
-            System.err.println("Error cargando datos iniciales: " + e.getMessage());
+            System.err.println("Error inicializando datos de prueba: " + e.getMessage());
         }
     }
 
     // 🔹 Método para eliminar todas las reuniones de un usuario (nivel 1)
+ // 🔹 Método para eliminar todas las reuniones de un usuario (nivel 1)
     public boolean eliminarUsuario(String usuario) {
         if (reunionesPorUsuario.containsKey(usuario)) {
             reunionesPorUsuario.remove(usuario);
@@ -212,7 +213,7 @@ public class Agenda {
         return false;
     }
 
-    // 🔹 Método para renombrar un usuario 
+    // 🔹 Método para renombrar un usuario (nivel 1 → cumple SIA2.12 Modificar)
     public boolean renombrarUsuario(String viejoNombre, String nuevoNombre) {
         if (!reunionesPorUsuario.containsKey(viejoNombre)) {
             return false; // no existe el usuario original
@@ -230,5 +231,3 @@ public class Agenda {
         return true;
     }
 }
-
-
