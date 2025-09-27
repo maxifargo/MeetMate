@@ -17,7 +17,7 @@ public class MainWindow extends JFrame {
         super("Agenda de Reuniones");
         this.ag = ag;
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(1000, 500);
+        setSize(1200, 500);
         setLocationRelativeTo(null);
 
         initUI();
