@@ -1,5 +1,16 @@
 # Proyecto SIA – Agenda de Reuniones
 
+Integrantes
+
+
+Joaquín Muñoz
+
+
+Joaquín Tapia
+
+
+Maximiliano Fargo
+
 Aplicación de escritorio en Java (Swing) para la gestión de reuniones, desarrollada como parte del curso Programación Avanzada.  
 Permite crear, editar, eliminar, filtrar y guardar reuniones en un archivo CSV, con soporte para etiquetas, usuarios y validación de datos.
 
