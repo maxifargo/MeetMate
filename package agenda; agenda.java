@@ -204,7 +204,6 @@ public class Agenda {
     }
 
     // 🔹 Método para eliminar todas las reuniones de un usuario (nivel 1)
- // 🔹 Método para eliminar todas las reuniones de un usuario (nivel 1)
     public boolean eliminarUsuario(String usuario) {
         if (reunionesPorUsuario.containsKey(usuario)) {
             reunionesPorUsuario.remove(usuario);
@@ -213,7 +212,7 @@ public class Agenda {
         return false;
     }
 
-    // 🔹 Método para renombrar un usuario (nivel 1 → cumple SIA2.12 Modificar)
+    // 🔹 Método para renombrar un usuario 
     public boolean renombrarUsuario(String viejoNombre, String nuevoNombre) {
         if (!reunionesPorUsuario.containsKey(viejoNombre)) {
             return false; // no existe el usuario original
@@ -231,4 +230,5 @@ public class Agenda {
         return true;
     }
 }
+
 
