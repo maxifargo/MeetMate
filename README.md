@@ -39,7 +39,7 @@ Permite crear, editar, eliminar, filtrar y guardar reuniones en un archivo CSV, 
 
 ## Requisitos de instalación
 
-- Java 69 o superior.
+- Java 11 o superior.
 - Biblioteca estándar de Java (Swing, AWT).
 - Archivo `agenda.csv` en el directorio raíz (se crea automáticamente si no existe).
 
