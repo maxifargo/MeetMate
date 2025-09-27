@@ -46,6 +46,7 @@ Al cerrar la ventana, los cambios se guardan automáticamente.
 
 Estructura del proyecto
 agenda/
+
  ├── Main.java                 # Punto de entrada de la aplicación
 
  ├── MainWindow.java           # Ventana principal con tabla y botones
@@ -67,6 +68,7 @@ Ejemplo de formato CSV
 El archivo agenda.csv almacena las reuniones en el siguiente formato:
 
 ID,Usuario,Fecha,Hora,Etiqueta
+
 1,Carlos,01/10/2025,09:00,Trabajo
 2,Ana,02/10/2025,10:30,Estudio
 3,Luis,03/10/2025,15:00,Deporte
