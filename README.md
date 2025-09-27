@@ -47,13 +47,21 @@ Al cerrar la ventana, los cambios se guardan automáticamente.
 Estructura del proyecto
 agenda/
  ├── Main.java                 # Punto de entrada de la aplicación
+
  ├── MainWindow.java           # Ventana principal con tabla y botones
+ 
  ├── Agenda.java               # Lógica principal de gestión de reuniones
+ 
  ├── Reunion.java              # Clase POJO de reunión
+ 
  ├── ReunionDialog.java        # Diálogo para crear/editar reuniones
+ 
  ├── FechaInvalidaException.java
+ 
  ├── HoraInvalidaException.java
+ 
  └── agenda.csv                # Archivo CSV de persistencia (se crea al ejecutar)
+ 
  
 Ejemplo de formato CSV
 El archivo agenda.csv almacena las reuniones en el siguiente formato:
