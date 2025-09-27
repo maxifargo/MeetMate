@@ -16,20 +16,20 @@ public class MainWindow extends JFrame {
     public MainWindow(Agenda ag) {
         super("Agenda de Reuniones");
         this.ag = ag;
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE); // 👈 importante para interceptar la X
         setSize(1200, 500);
         setLocationRelativeTo(null);
 
         initUI();
         cargarReuniones();
+
+        // Cerrar con confirmación al usar la X
         addWindowListener(new java.awt.event.WindowAdapter() {
             @Override
             public void windowClosing(java.awt.event.WindowEvent windowEvent) {
-                ag.guardarEnArchivo("agenda.csv"); // guarda los datos al cerrar
-                System.exit(0);
+                salirConConfirmacion();
             }
         });
-
     }
 
     private void initUI() {
@@ -55,7 +55,9 @@ public class MainWindow extends JFrame {
         JButton btnFilter = new JButton("Filtrar por etiqueta");
         JButton btnFilterRango = new JButton("Filtrar por rango de fechas");
         JButton btnBuscarId = new JButton("Buscar por ID");
-        JButton btnRenameUser = new JButton("Renombrar usuario"); // <-- aquí
+        JButton btnRenameUser = new JButton("Renombrar usuario");
+        JButton btnDeleteUser = new JButton("Eliminar usuario"); // 👈 nuevo
+        JButton btnSalir = new JButton("Salir"); // 👈 nuevo
 
         // Añadir botones al panel
         panelBtns.add(btnAdd);
@@ -65,7 +67,9 @@ public class MainWindow extends JFrame {
         panelBtns.add(btnFilter);
         panelBtns.add(btnFilterRango);
         panelBtns.add(btnBuscarId);
-        panelBtns.add(btnRenameUser); // <-- aquí
+        panelBtns.add(btnRenameUser);
+        panelBtns.add(btnDeleteUser);
+        panelBtns.add(btnSalir);
 
         // Acciones de los botones
         btnAdd.addActionListener(e -> onAdd());
@@ -93,10 +97,41 @@ public class MainWindow extends JFrame {
             }
         });
 
+        // Acción para eliminar usuario
+        btnDeleteUser.addActionListener(e -> {
+            String usuario = JOptionPane.showInputDialog(this, "Ingrese el nombre del usuario a eliminar:");
+            if (usuario == null || usuario.isBlank()) return;
+
+            if (ag.eliminarUsuario(usuario)) {
+                JOptionPane.showMessageDialog(this, "Usuario eliminado correctamente.");
+                cargarReuniones();
+                ag.guardarEnArchivo("agenda.csv");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error: el usuario no existe.");
+            }
+        });
+
+        // Acción de salir
+        btnSalir.addActionListener(e -> salirConConfirmacion());
+
         // Layout del JFrame
         getContentPane().setLayout(new BorderLayout());
         getContentPane().add(scroll, BorderLayout.CENTER);
         getContentPane().add(panelBtns, BorderLayout.SOUTH);
+    }
+
+    private void salirConConfirmacion() {
+        int opcion = JOptionPane.showConfirmDialog(this,
+                "¿Desea guardar los cambios antes de salir?",
+                "Confirmar salida",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
+        
+        if (opcion == JOptionPane.YES_OPTION) {
+            ag.guardarEnArchivo("agenda.csv");
+        }
+        if(opcion == JOptionPane.NO_OPTION)
+        System.exit(0);
     }
     private void cargarReuniones() {
         model.setRowCount(0);
