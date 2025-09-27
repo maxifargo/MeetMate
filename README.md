@@ -73,9 +73,3 @@ ID,Usuario,Fecha,Hora,Etiqueta
 2,Ana,02/10/2025,10:30,Estudio
 3,Luis,03/10/2025,15:00,Deporte
 
-Notas:
-Este es un primer avance del proyecto.
-
-Se agregarán más funcionalidades en próximos hitos.
-
-El repositorio incluye además un diagrama UML en formato .png y .puml para la visualización de la estructura de clases.
